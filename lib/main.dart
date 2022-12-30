@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:news_app/homePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -54,7 +55,15 @@ class LoginPage extends StatelessWidget {
           )),
           Lottie.asset("assets/94515-man-on-rocket.json"),
           ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) {
+                      return const HomePage();
+                    },
+                  ),
+                );
+              },
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   foregroundColor: Colors.deepPurple,
